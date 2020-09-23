@@ -25,6 +25,6 @@ def get_game_price(url):
     try:
         soup = BeautifulSoup(page.content,'html.parser')
         game_price = soup.find('h3',class_='price-display__price')
-        return game_price.text[:-1] 
+        return game_price.text[:-2] 
     except AttributeError:
         return None
