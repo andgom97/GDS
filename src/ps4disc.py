@@ -13,7 +13,6 @@ def save_prices():
     # Loop to make the scrapping
     for game in GAMES:
         res[game] = get_game_price(PRODUCT+GAMES[game]).replace(',','.')
-    
     # Try to 
     try:
         # Replace the old prices
@@ -50,8 +49,8 @@ def print_prices():
     # For each game check if the price got reduced, increased or its the same and print it
     for game in new_prices:
         try:
-            old_price = float(old_prices[game])
             new_price = float(new_prices[game])
+            old_price = float(old_prices[game])
             if old_price < new_price:
                 prRed(f"{game[:1].upper()+game[1:].replace('-',' ')} : {new_price} ↑")
             elif old_price > new_price:
@@ -63,4 +62,5 @@ def print_prices():
     
 
 # Exec
+save_prices()
 print_prices()
