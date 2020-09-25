@@ -18,18 +18,15 @@ def save_prices():
             sleep(0.01)
             bar()
     try:
-        print('b')
-        new_prices = open(DATA_PATH+'new_prices.json','w')
-        new_prices.write(json.dumps(res, indent=4))
         copy2(DATA_PATH+'new_prices.json',DATA_PATH+'old_prices.json')
     except FileNotFoundError:
-        open(DATA_PATH+'old_prices.json','w+')
-        new_prices = open(DATA_PATH+'new_prices.json','w+')        
-        new_prices.write(json.dumps(res, indent=4))
-        copy2(DATA_PATH+'new_prices.json',DATA_PATH+'old_prices.json')
+        old_prices = open(DATA_PATH+'old_prices.json','w+')
+        old_prices.write(json.dumps(res,indent=4))
     except Exception as e:
         prLightOrange(e)
     finally:
+        new_prices = open(DATA_PATH+'new_prices.json','w+')        
+        new_prices.write(json.dumps(res, indent=4))
         prGreen(f"Data was successfully saved")
 
 # Save prices
