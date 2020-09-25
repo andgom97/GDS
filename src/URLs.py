@@ -13,8 +13,11 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'shadow-of-the-colossus':'EP9000-CUSA08809_00-SOTC0000000000EU',
          'metro-exodus':'EP4062-CUSA11407_00-METROEXODUS00000',
          'the-last-of-us-parte-2':'EP9000-CUSA10249_00-THELASTOFUSPART2',
-         'prey':'EP1003-CUSA06560_00-PREYPS4FULLGAME1'
-         #'outter-worlds':''
+         'prey':'EP1003-CUSA06560_00-PREYPS4FULLGAME1',
+         'the-outer-worlds':'EP4829-CUSA13689_00-THEOUTERWORLDS01',
+         'no-mans-sky':'EP2034-CUSA03952_00-NOMANSSKYHG00001',
+         'yakuza-6':'EP0177-CUSA09660_00-YAKUZA6SONGOFLEN',
+         'persona-5':'EP4062-CUSA06638_00-PERSONA512345678'
         }
 
 SEARCH_FOR_GAME = 'https://store.playstation.com/es-es/grid/search-game/1?gameContentType=games&query='

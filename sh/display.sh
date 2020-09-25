@@ -1,0 +1,1 @@
+python3 $PS4_DISC/src/display.py
