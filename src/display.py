@@ -27,5 +27,6 @@ def print_prices():
                 prLightGray(f"{game[:1].upper()+game[1:].replace('-',' ')} : {new_price} -")
     except FileNotFoundError:
         prLightOrange(f"Data needs to be downloaded first")
+
 # Display prices
 print_prices()

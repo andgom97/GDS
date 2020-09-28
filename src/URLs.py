@@ -17,7 +17,12 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'the-outer-worlds':'EP4829-CUSA13689_00-THEOUTERWORLDS01',
          'no-mans-sky':'EP2034-CUSA03952_00-NOMANSSKYHG00001',
          'yakuza-6':'EP0177-CUSA09660_00-YAKUZA6SONGOFLEN',
-         'persona-5':'EP4062-CUSA06638_00-PERSONA512345678'
+         'persona-5':'EP4062-CUSA06638_00-PERSONA512345678',
+         'cuphead':'EP8254-CUSA20469_00-CUPHEAD000000000',
+         'death-stranding':'EP9000-CUSA12606_00-DEATHSTRAND00001',
+         'devil-may-cry-6':'EP0102-CUSA08161_00-DMC5BUNDLE000RO1',
+         'mafia-1':'EP1001-CUSA18100_00-MAFIAONEREMASTER',
+         'mafia-2':'EP1001-CUSA17761_00-MAFIATWOREMASTER'
         }
 
 SEARCH_FOR_GAME = 'https://store.playstation.com/es-es/grid/search-game/1?gameContentType=games&query='

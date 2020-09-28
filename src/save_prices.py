@@ -9,12 +9,24 @@ from time import sleep
 
 DATA_PATH = os.getenv('PS4_DISC')+'/data/'
 
+# Function that orders a dictionary alphabetically
+def order_alphabetically(dic):
+    res = {}
+    try:
+        sortednames=sorted(dic.keys(), key=lambda x:x.lower())
+        for game in sortednames:
+            res[game] = dic[game]
+        return res
+    except Exception as e:
+        prLightOrange(e)
+
 # Function that first replaces the old_prices and then saves the new ones
 def save_prices():
     res = {}
-    with alive_bar(len(GAMES), title='Progress', bar='classic',spinner='vertical') as bar:
-        for game in GAMES:
-            res[game] = get_game_price(PRODUCT+GAMES[game]).replace(',','.')
+    games = order_alphabetically(GAMES)
+    with alive_bar(len(games), title='Progress', bar='classic',spinner='vertical') as bar:
+        for game in games:
+            res[game] = get_game_price(PRODUCT+games[game]).replace(',','.')
             sleep(0.01)
             bar()
     try:
