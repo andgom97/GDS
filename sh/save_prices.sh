@@ -1,1 +1,1 @@
-python3 $PS4_DISC/src/save_prices.py
+python3 /Users/AndrewGomek/desktop/contrib/ps4_discounts_scrapper/src/save_prices.py
