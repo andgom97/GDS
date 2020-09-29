@@ -39,7 +39,7 @@ def save_prices():
     finally:
         new_prices = open(DATA_PATH+'new_prices.json','w+')        
         new_prices.write(json.dumps(res, indent=4))
-        prGreen(f"Data was successfully saved")
+        prGreen(f"Data successfully saved")
 
 # Save prices
 save_prices()

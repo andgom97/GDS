@@ -54,7 +54,3 @@ def search_game(game):
         prLightOrange(f"Game: {game} couldn't be found")
     finally:
         return game_url
-
-link = PSSTR +search_game('enter-the-gungeon')
-print(get_game_name(link))
-print(get_game_price(link))
