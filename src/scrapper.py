@@ -38,7 +38,16 @@ def get_game_price(url):
         game_price = soup.find('h3',class_='price-display__price')
         return game_price.text[:-2] 
     except AttributeError:
-        prLightOrange(f"Wrong url: {url}")
+        return None
+
+# Function that gets the previous price if the product has a discount
+def get_game_prev_price(url):
+    page = get_resource(url)
+    try:
+        soup = BeautifulSoup(page.content,'html.parser')
+        game_price = soup.find('div',class_='price')
+        return game_price.text[:-2] 
+    except AttributeError:
         return None
 
 # Function to search the url of a game giving its name
