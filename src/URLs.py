@@ -4,7 +4,6 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'spyro':'EP0002-CUSA12085_00-SPYROTRILOGY0001',
          'sekiro':'EP0002-CUSA13801_00-SEKIROGAME000001',
          'god-of-war':'EP9000-CUSA07411_00-0000000GODOFWARN',
-         'dead-cells':'EP3862-CUSA10484_00-DEADCELLS0000000',
          'nier-automata':'EP0082-CUSA04480_00-GOTYORHADIGITAL0',
          'doom':'EP1003-CUSA02092_00-DOOMEUROPEROWSKU',
          'doom-eternal':'EP1003-CUSA13275_00-DOOMETERNALBUNDL',
@@ -22,7 +21,11 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'death-stranding':'EP9000-CUSA12606_00-DEATHSTRAND00001',
          'devil-may-cry-6':'EP0102-CUSA08161_00-DMC5BUNDLE000RO1',
          'mafia-1':'EP1001-CUSA18100_00-MAFIAONEREMASTER',
-         'mafia-2':'EP1001-CUSA17761_00-MAFIATWOREMASTER'
+         'mafia-2':'EP1001-CUSA17761_00-MAFIATWOREMASTER',
+         'SOMA':'EP1188-CUSA03200_00-HPL3SOMAGAME2015',
+         'days-gone':'EP9000-CUSA09175_00-DAYSGONECOMPLETE',
+         'middle-earth':'EP1018-CUSA00053_00-SHADOWOFMORDOR01',
+         'middle-earth-2':'EP1018-CUSA04402_00-KRAKENEDIT0STAND'
         }
 
 SEARCH_FOR_GAME = 'https://store.playstation.com/es-es/grid/search-game/1?gameContentType=games&query='

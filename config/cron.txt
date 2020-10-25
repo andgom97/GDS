@@ -1,1 +1,1 @@
-00 06 * * * source /Users/AndrewGomek/.bash_profile; $PS4_DISC/sh/save_prices.sh
+00 14 * * * source /Users/AndrewGomek/.bash_profile; $PS4_DISC/sh/save_prices.sh
