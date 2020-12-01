@@ -28,8 +28,10 @@ def save_prices():
         for game in games:
             # If it is discounted
             if get_game_prev_price(PRODUCT+games[game]):
+                print(game)
                 res[game] = (get_game_prev_price(PRODUCT+games[game]).replace(',','.'),get_game_price(PRODUCT+games[game]).replace(',','.'))
             else:
+                print(game)
                 res[game] = (get_game_price(PRODUCT+games[game]).replace(',','.'),None)
             sleep(0.01)
             bar()

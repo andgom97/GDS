@@ -1,23 +1,35 @@
 {
+    "assassins-creed-origins": [
+        "69.99",
+        "15.39"
+    ],
     "cuphead": [
         "19.99",
         null
     ],
+    "dark-souls-1": [
+        "39.99",
+        null
+    ],
+    "dark-souls-3": [
+        "69.99",
+        "49.99"
+    ],
     "days-gone": [
         "69.99",
-        "20.29"
+        null
     ],
     "death-stranding": [
         "69.99",
-        "30.09"
-    ],
-    "devil-may-cry-6": [
-        "24.99",
         "19.99"
+    ],
+    "devil-may-cry-5": [
+        "24.99",
+        null
     ],
     "dishonored-2": [
         "19.99",
-        null
+        "5.99"
     ],
     "doom": [
         "19.99",
@@ -25,10 +37,22 @@
     ],
     "doom-eternal": [
         "69.99",
-        "34.99"
+        null
     ],
     "god-of-war": [
-        "19.99",
+        "29.99",
+        "19.99"
+    ],
+    "kingdom-hearts-1.5+2.5 remix": [
+        "49.99",
+        null
+    ],
+    "kingdom-hearts-2.8": [
+        "59.99",
+        null
+    ],
+    "kingdom-hearts-3-re-mind": [
+        "29.99",
         null
     ],
     "mafia-1": [
@@ -39,7 +63,7 @@
         "29.99",
         null
     ],
-    "metro-exodus": [
+    "middle-earth-2": [
         "39.99",
         null
     ],
@@ -53,15 +77,15 @@
     ],
     "persona-5": [
         "69.99",
-        null
+        "17.49"
     ],
     "prey": [
         "39.99",
-        null
+        "39.99"
     ],
     "read-dead-redemption-2": [
-        "69.99",
-        null
+        "99.99",
+        "59.99"
     ],
     "sekiro": [
         "69.99",
@@ -69,10 +93,6 @@
     ],
     "shadow-of-the-colossus": [
         "39.99",
-        null
-    ],
-    "SOMA": [
-        "28.49",
         null
     ],
     "spyro": [
@@ -83,16 +103,16 @@
         "69.99",
         null
     ],
-    "the-outer-worlds": [
+    "yakuza-6": [
+        "19.99",
+        null
+    ],
+    "yakuza-remastered-collection": [
         "59.99",
         null
     ],
-    "wolfenstein-2": [
-        "39.99",
-        "19.99"
-    ],
-    "yakuza-6": [
-        "19.99",
+    "yakuza:-like-a_dragon": [
+        "59.99",
         null
     ]
 }
