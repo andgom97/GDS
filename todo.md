@@ -1,2 +1,2 @@
-[ ] Multithreading game prices saving (Optimize the scrapper)
-[ ] Random game selection
+- [ ] Multithreading game prices saving (Optimize the scrapper).
+- [ ] Random game selection.
