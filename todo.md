@@ -1,0 +1,2 @@
+- [X] Multithreading game prices saving (Optimize the scrapper).
+- [X] Random game selection.

@@ -7,7 +7,6 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'nier-automata':'EP0082-CUSA04480_00-GOTYORHADIGITAL0',
          'doom':'EP1003-CUSA02092_00-DOOMEUROPEROWSKU',
          'doom-eternal':'EP1003-CUSA13275_00-DOOMETERNALBUNDL',
-         'dishonored-2':'EP1003-CUSA04806_00-DISHONOREDTWOPS4',
          'shadow-of-the-colossus':'EP9000-CUSA08809_00-SOTC0000000000EU',
          'the-last-of-us-parte-2':'EP9000-CUSA10249_00-THELASTOFUSPART2',
          'prey':'EP1003-CUSA06560_00-PREYPS4FULLGAME1',
@@ -28,7 +27,8 @@ GAMES = {'read-dead-redemption-2':'EP1004-CUSA08519_00-REDEMPTION000002',
          'yakuza:-like-a_dragon':'EP0177-CUSA16745_00-SHINRYUGAGOTOKEN',
          'yakuza-remastered-collection':'EP0177-CUSA15360_00-YAKUZAREMASTERED',
          'dark-souls-1':'EP0700-CUSA08495_00-DARKSOULSHD00000',
-         'dark-souls-3':'EP0700-CUSA03365_00-DARKSOULS3000000'
+         'dark-souls-3':'EP0700-CUSA03365_00-DARKSOULS3000000',
+         'star-wars-jedi:-fallen-order':'EP0006-CUSA12529_00-RESPAWNSWBIRDDOG'
         }
 
 SEARCH_FOR_GAME = 'https://store.playstation.com/es-es/grid/search-game/1?gameContentType=games&query='

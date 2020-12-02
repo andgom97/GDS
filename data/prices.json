@@ -27,10 +27,6 @@
         "24.99",
         null
     ],
-    "dishonored-2": [
-        "19.99",
-        "5.99"
-    ],
     "doom": [
         "19.99",
         null
@@ -85,7 +81,7 @@
     ],
     "read-dead-redemption-2": [
         "99.99",
-        "59.99"
+        "19.99"
     ],
     "sekiro": [
         "69.99",
@@ -97,6 +93,10 @@
     ],
     "spyro": [
         "39.99",
+        null
+    ],
+    "star-wars-jedi:-fallen-order": [
+        "69.99",
         null
     ],
     "the-last-of-us-parte-2": [
