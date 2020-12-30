@@ -1,8 +1,12 @@
 import json, os, sys
-sys.path.insert(1, '../')
-from prcolors import prLightGray, prLightOrange
 
+
+
+SRC_PATH = os.getenv('PS4_DISC')+'/src/'
 DATA_PATH = os.getenv('PS4_DISC')+'/data/'
+
+sys.path.insert(1, SRC_PATH)
+from prcolors import prLightGray, prLightOrange
 
 # Function that reads the prices allocated in ../data/prices.json
 def read_prices():

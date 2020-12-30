@@ -1,43 +1,43 @@
 {
     "assassins-creed-origins": [
         "69.99",
-        "15.39"
+        null
     ],
     "cuphead": [
         "19.99",
-        null
+        "13.99"
     ],
     "dark-souls-1": [
         "39.99",
-        null
+        "11.99"
     ],
     "dark-souls-3": [
-        "69.99",
-        "49.99"
+        "49.99",
+        "12.49"
     ],
     "days-gone": [
         "69.99",
-        null
+        "20.29"
     ],
     "death-stranding": [
         "69.99",
-        "19.99"
+        null
     ],
     "devil-may-cry-5": [
         "24.99",
-        null
+        "19.99"
     ],
     "doom": [
         "19.99",
-        null
+        "5.99"
     ],
     "doom-eternal": [
         "69.99",
-        null
+        "23.09"
     ],
     "god-of-war": [
-        "29.99",
-        "19.99"
+        "19.99",
+        null
     ],
     "kingdom-hearts-1.5+2.5 remix": [
         "49.99",
@@ -53,7 +53,7 @@
     ],
     "mafia-1": [
         "39.99",
-        null
+        "29.99"
     ],
     "mafia-2": [
         "29.99",
@@ -65,27 +65,27 @@
     ],
     "nier-automata": [
         "39.99",
-        null
+        "19.99"
     ],
     "no-mans-sky": [
         "49.99",
-        null
+        "24.99"
     ],
     "persona-5": [
         "69.99",
-        "17.49"
+        null
     ],
     "prey": [
         "39.99",
-        "39.99"
+        null
     ],
     "read-dead-redemption-2": [
-        "99.99",
-        "19.99"
+        "19.99",
+        null
     ],
     "sekiro": [
         "69.99",
-        null
+        "45.49"
     ],
     "shadow-of-the-colossus": [
         "39.99",
@@ -93,7 +93,7 @@
     ],
     "spyro": [
         "39.99",
-        null
+        "13.99"
     ],
     "star-wars-jedi:-fallen-order": [
         "69.99",
@@ -101,7 +101,7 @@
     ],
     "the-last-of-us-parte-2": [
         "69.99",
-        null
+        "39.89"
     ],
     "yakuza-6": [
         "19.99",
@@ -109,10 +109,10 @@
     ],
     "yakuza-remastered-collection": [
         "59.99",
-        null
+        "29.99"
     ],
     "yakuza:-like-a_dragon": [
         "59.99",
-        null
+        "44.99"
     ]
 }
