@@ -1,5 +1,5 @@
 # ps4_disc scrapper
-export PS4_DISC="$HOME/desktop/contrib/ps4_discounts_scrapper"
+export PS4_DISC="$HOME/path/to/ps4_discounts_scrapper"
 
 # Display ps4 games prices
 alias games='$PS4_DISC/sh/display.sh'
