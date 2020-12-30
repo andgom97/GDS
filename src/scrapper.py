@@ -35,7 +35,7 @@ def get_game_price(url):
     page = get_resource(url)
     try:
         soup = BeautifulSoup(page.content,'html.parser')
-        game_price = soup.find('span',class_='psw-h3')
+        game_price = soup.find('span',class_='psw-l-space-x-s psw-l-line-left').find('span',class_='psw-h3')
         return game_price.text[:-2] 
     except AttributeError:
         return None
@@ -45,7 +45,7 @@ def get_game_prev_price(url):
     page = get_resource(url)
     try:
         soup = BeautifulSoup(page.content,'html.parser')
-        game_price = soup.find('span',class_='psw-h4 psw-c-secondary psw-text-strike-through')
+        game_price = soup.find('span',class_='psw-l-space-x-s psw-l-line-left').find('span',class_='psw-h4 psw-c-secondary psw-text-strike-through')
         return game_price.text[:-2] 
     except AttributeError:
         return None

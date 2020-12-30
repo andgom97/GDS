@@ -44,7 +44,7 @@ def save_prices():
         prices.write(json.dumps(order_alphabetically(res), indent=4))
         prGreen(f"Data successfully saved")
     except Exception as e:
-        prLightOrange(e)
-    
+        prLightOrange(e)    
+
 # Save prices
 save_prices()
