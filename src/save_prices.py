@@ -7,7 +7,7 @@ from scrapper import get_game_price, get_game_prev_price
 import random
 from multiprocessing.dummy import Pool as ThreadPool
 
-DATA_PATH = os.getenv('PS4_DISC')+'/data/'
+DATA_PATH = os.getenv('GDS')+'/data/'
 
 # Function that orders a dictionary alphabetically
 def order_alphabetically(dic):
@@ -30,7 +30,7 @@ def save_price(game):
         print(' -> '+game)
         return (get_game_price(PRODUCT+GAMES[game]).replace(',','.'),None)
 
-# Function that saves all the prices
+# Function that saves all the prices randomly and concurrently
 def save_prices():
     res = {}
     games = list(GAMES.keys())
@@ -46,5 +46,5 @@ def save_prices():
     except Exception as e:
         prLightOrange(e)    
 
-# Save prices
+# Save prices call
 save_prices()

@@ -1,5 +1,5 @@
-# ps4_disc scrapper
-export PS4_DISC="$HOME/path/to/ps4_discounts_scrapper"
+# GDS env var
+export GDS="$HOME/path/to/GDS"
 
-# Display ps4 games prices
-alias games='$PS4_DISC/sh/display.sh'
+# Display game prices on your terminal
+alias gds='$GDS/sh/display.sh'

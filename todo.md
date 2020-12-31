@@ -1,3 +1,5 @@
 - [X] Multithreading game prices saving (Optimize the scrapper).
 - [X] Random game selection.
-- [ ] Fix the alive_bar issue
+- [ ] Fix the alive_bar issue.
+- [ ] Steam store scrapper and HTTP API access.
+- [ ] Epic games store scrapper and HTTP API access.

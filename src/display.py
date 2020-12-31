@@ -2,7 +2,7 @@ import json
 import os
 from prcolors import prLightGray, prLightOrange
 
-DATA_PATH = os.getenv('PS4_DISC')+'/data/'
+DATA_PATH = os.getenv('GDS')+'/data/'
 
 # Main function to display info in the terminal
 def print_prices():

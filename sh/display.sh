@@ -1,1 +1,1 @@
-python3 $PS4_DISC/src/display.py
+python3 $GDS/src/display.py

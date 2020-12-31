@@ -1,1 +1,1 @@
-00 14 * * * source /path/to/.bash_profile; $PS4_DISC/sh/save_prices.sh
+00 14 * * * source /path/to/.bash_profile; $GDS/sh/save_prices.sh
