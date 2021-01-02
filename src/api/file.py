@@ -1,9 +1,7 @@
 import json, os, sys
 
-
-
-SRC_PATH = os.getenv('PS4_DISC')+'/src/'
-DATA_PATH = os.getenv('PS4_DISC')+'/data/'
+SRC_PATH = os.getenv('GDS')+'/src/'
+DATA_PATH = os.getenv('GDS')+'/data/'
 
 sys.path.insert(1, SRC_PATH)
 from prcolors import prLightGray, prLightOrange

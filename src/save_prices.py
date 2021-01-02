@@ -1,9 +1,9 @@
 from prcolors import prLightGray, prRed, prGreen, prLightOrange
-from URLs import GAMES, PRODUCT
+from URLs import GAMES, PS_PRODUCT, STM_PRODUCT
 import json
 from shutil import copy2
 import os
-from scrapper import get_game_price, get_game_prev_price
+from scrapper import get_game_price_ps, get_game_price_st
 import random
 from multiprocessing.dummy import Pool as ThreadPool
 
@@ -22,14 +22,12 @@ def order_alphabetically(dic):
 
 # Function that saves the game price on the json file
 def save_price(game):
-    # If it is discounted
-    if get_game_prev_price(PRODUCT+GAMES[game]):
-        print(' -> '+game)
-        return (get_game_prev_price(PRODUCT+GAMES[game]).replace(',','.'),get_game_price(PRODUCT+GAMES[game]).replace(',','.'))
-    else:
-        print(' -> '+game)
-        return (get_game_price(PRODUCT+GAMES[game]).replace(',','.'),None)
-
+    print(' -> '+game)
+    if not GAMES[game]['ps']:
+        return (get_game_price_ps(None),get_game_price_st(STM_PRODUCT+GAMES[game]['st']))
+    if not GAMES[game]['st']:
+        return (get_game_price_ps(PS_PRODUCT+GAMES[game]['ps']),get_game_price_st(None))
+    return (get_game_price_ps(PS_PRODUCT+GAMES[game]['ps']),get_game_price_st(STM_PRODUCT+GAMES[game]['st']))
 # Function that saves all the prices randomly and concurrently
 def save_prices():
     res = {}
@@ -38,7 +36,7 @@ def save_prices():
     with ThreadPool(len(games)) as pool:
         prices = pool.map(save_price,games)
         for i,game in enumerate(games):
-            res[game] = prices[i]
+            res[game] = {'ps':prices[i][0],'st':prices[i][1]}
     try:
         prices = open(DATA_PATH+'prices.json','w+')        
         prices.write(json.dumps(order_alphabetically(res), indent=4))
