@@ -37,5 +37,7 @@ GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTION000002','
          'yakuza-remastered-collection':{'ps':'EP0177-CUSA15360_00-YAKUZAREMASTERED','st':None},
          'dark-souls-1':{'ps':'EP0700-CUSA08495_00-DARKSOULSHD00000','st':'570940/DARK_SOULS_REMASTERED/'},
          'dark-souls-3':{'ps':'EP0700-CUSA03365_00-DARKSOULS3000000','st':'374320/DARK_SOULS_III/'},
-         'star-wars-jedi:-fallen-order':{'ps':'EP0006-CUSA12529_00-RESPAWNSWBIRDDOG','st':'1172380/STAR_WARS_Jedi_La_Orden_cada/'}
+         'star-wars-jedi:-fallen-order':{'ps':'EP0006-CUSA12529_00-RESPAWNSWBIRDDOG','st':'1172380/STAR_WARS_Jedi_La_Orden_cada/'},
+         'final-fantasy-7-remake':{'ps':'EP0082-CUSA07187_00-FFVIIREMAKE00000','st':None},
+         'kentucky-route-zero':{'ps':'EP2333-CUSA10030_00-KRZTVSIEE0000000','st':'231200/Kentucky_Route_Zero_PC_Edition/'}
         }

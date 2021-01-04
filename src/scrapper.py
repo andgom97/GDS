@@ -54,13 +54,13 @@ def get_game_price_ps(url):
     page = get_resource(url)
     try:
         soup = BeautifulSoup(page.content,'html.parser')
-        price_section = soup.find('div',class_='psw-l-anchor psw-l-stack-left psw-l-space-y-l psw-fill-x')
+        price_section = soup.find('label',attrs={'data-qa':'mfeCtaMain#offer0'})
         # Extract standard price
         fn_game_price = price_section.find('span',class_='psw-h3')
         # Extract final price
         og_game_price = price_section.find('span',class_='psw-h4 psw-c-secondary psw-text-strike-through')
         if not og_game_price: # If not discounted
-            return fn_game_price.text[:-2]
+            return fn_game_price.text[:-2].replace(',','.')
         # Extract discount countdown
         countdown_str = price_section.find('span',class_='psw-p-l-xs psw-body-2 psw-text-medium psw-c-secondary psw-m-x-3xs psw-m-y-4xs')
         countdown_value = countdown_str.text.split()[-1:][0].split('/')
@@ -92,7 +92,3 @@ def get_game_price_st(url):
         return price.text[9:14].replace(',','.')
     except AttributeError:
         return None
-
-#print(get_game_price_ps('https://store.playstation.com/es-es/product/EP0001-CUSA05625_00-GAMEACEMPIRE0000'))
-#print(get_game_price_ps('https://store.playstation.com/es-es/product/EP0001-PPSA01490_00-GAME000000000000'))
-print(get_game_price_st(None))

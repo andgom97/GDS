@@ -1,118 +1,254 @@
 {
-    "assassins-creed-origins": [
-        "69.99",
-        null
-    ],
-    "cuphead": [
-        "19.99",
-        "13.99"
-    ],
-    "dark-souls-1": [
-        "39.99",
-        "11.99"
-    ],
-    "dark-souls-3": [
-        "49.99",
-        "12.49"
-    ],
-    "days-gone": [
-        "69.99",
-        "20.29"
-    ],
-    "death-stranding": [
-        "69.99",
-        null
-    ],
-    "devil-may-cry-5": [
-        "24.99",
-        "19.99"
-    ],
-    "doom": [
-        "19.99",
-        "5.99"
-    ],
-    "doom-eternal": [
-        "69.99",
-        "23.09"
-    ],
-    "god-of-war": [
-        "19.99",
-        null
-    ],
-    "kingdom-hearts-1.5+2.5 remix": [
-        "49.99",
-        null
-    ],
-    "kingdom-hearts-2.8": [
-        "59.99",
-        null
-    ],
-    "kingdom-hearts-3-re-mind": [
-        "29.99",
-        null
-    ],
-    "mafia-1": [
-        "39.99",
-        "29.99"
-    ],
-    "mafia-2": [
-        "29.99",
-        null
-    ],
-    "middle-earth-2": [
-        "39.99",
-        null
-    ],
-    "nier-automata": [
-        "39.99",
-        "19.99"
-    ],
-    "no-mans-sky": [
-        "49.99",
-        "24.99"
-    ],
-    "persona-5": [
-        "69.99",
-        null
-    ],
-    "prey": [
-        "39.99",
-        null
-    ],
-    "read-dead-redemption-2": [
-        "19.99",
-        null
-    ],
-    "sekiro": [
-        "69.99",
-        "45.49"
-    ],
-    "shadow-of-the-colossus": [
-        "39.99",
-        null
-    ],
-    "spyro": [
-        "39.99",
-        "13.99"
-    ],
-    "star-wars-jedi:-fallen-order": [
-        "69.99",
-        null
-    ],
-    "the-last-of-us-parte-2": [
-        "69.99",
-        "39.89"
-    ],
-    "yakuza-6": [
-        "19.99",
-        null
-    ],
-    "yakuza-remastered-collection": [
-        "59.99",
-        "29.99"
-    ],
-    "yakuza:-like-a_dragon": [
-        "59.99",
-        "44.99"
-    ]
+    "assassins-creed-origins": {
+        "ps": "69.99",
+        "st": [
+            "59.99",
+            "11.99",
+            "ends-in"
+        ]
+    },
+    "cuphead": {
+        "ps": [
+            "19.99",
+            "13.99",
+            "19-January"
+        ],
+        "st": [
+            "19.99",
+            "13.99",
+            "ends-in"
+        ]
+    },
+    "dark-souls-1": {
+        "ps": [
+            "39.99",
+            "11.99",
+            "19-January"
+        ],
+        "st": "39.99"
+    },
+    "dark-souls-3": {
+        "ps": [
+            "49.99",
+            "12.49",
+            "19-January"
+        ],
+        "st": [
+            "59.99",
+            "14.99",
+            "ends-in"
+        ]
+    },
+    "days-gone": {
+        "ps": [
+            "69.99",
+            "20.29",
+            "8-January"
+        ],
+        "st": null
+    },
+    "death-stranding": {
+        "ps": "69.99",
+        "st": null
+    },
+    "devil-may-cry-5": {
+        "ps": [
+            "24.99",
+            "19.99",
+            "8-January"
+        ],
+        "st": [
+            "24.99",
+            "19.99",
+            "ends-in"
+        ]
+    },
+    "doom": {
+        "ps": [
+            "19.99",
+            "5.99",
+            "19-January"
+        ],
+        "st": [
+            "19.99",
+            "5.99",
+            "ends-in"
+        ]
+    },
+    "doom-eternal": {
+        "ps": [
+            "69.99",
+            "23.09",
+            "8-January"
+        ],
+        "st": [
+            "59.99",
+            "19.79",
+            "ends-in"
+        ]
+    },
+    "final-fantasy-7-remake": {
+        "ps": [
+            "69.99",
+            "34.99",
+            "8-January"
+        ],
+        "st": null
+    },
+    "god-of-war": {
+        "ps": "19.99",
+        "st": null
+    },
+    "kentucky-route-zero": {
+        "ps": [
+            "21.99",
+            "14.29",
+            "19-January"
+        ],
+        "st": [
+            "22.99",
+            "16.09",
+            "ends-in"
+        ]
+    },
+    "kingdom-hearts-1.5+2.5 remix": {
+        "ps": "49.99",
+        "st": null
+    },
+    "kingdom-hearts-2.8": {
+        "ps": "59.99",
+        "st": null
+    },
+    "kingdom-hearts-3-re-mind": {
+        "ps": "29.99",
+        "st": null
+    },
+    "mafia-1": {
+        "ps": [
+            "39.99",
+            "29.99",
+            "8-January"
+        ],
+        "st": [
+            "39.99",
+            "29.99",
+            "ends-in"
+        ]
+    },
+    "mafia-2": {
+        "ps": "29.99",
+        "st": [
+            "29.99",
+            "14.99",
+            "ends-in"
+        ]
+    },
+    "middle-earth-2": {
+        "ps": "39.99",
+        "st": [
+            "39.99",
+            "7.99",
+            "ends-in"
+        ]
+    },
+    "nier-automata": {
+        "ps": [
+            "39.99",
+            "19.99",
+            "19-January"
+        ],
+        "st": null
+    },
+    "no-mans-sky": {
+        "ps": [
+            "49.99",
+            "24.99",
+            "19-January"
+        ],
+        "st": [
+            "54.99",
+            "27.49",
+            "ends-in"
+        ]
+    },
+    "persona-5": {
+        "ps": "69.99",
+        "st": null
+    },
+    "prey": {
+        "ps": "39.99",
+        "st": [
+            "29.99",
+            "8.99",
+            "ends-in"
+        ]
+    },
+    "read-dead-redemption-2": {
+        "ps": "19.99",
+        "st": [
+            "59.99",
+            "40.19",
+            "ends-in"
+        ]
+    },
+    "sekiro": {
+        "ps": [
+            "69.99",
+            "45.49",
+            "8-January"
+        ],
+        "st": [
+            "59.99",
+            "38.99",
+            "ends-in"
+        ]
+    },
+    "shadow-of-the-colossus": {
+        "ps": "39.99",
+        "st": null
+    },
+    "spyro": {
+        "ps": [
+            "39.99",
+            "13.99",
+            "8-January"
+        ],
+        "st": null
+    },
+    "star-wars-jedi:-fallen-order": {
+        "ps": "69.99",
+        "st": null
+    },
+    "the-last-of-us-parte-2": {
+        "ps": [
+            "69.99",
+            "39.89",
+            "8-January"
+        ],
+        "st": null
+    },
+    "yakuza-6": {
+        "ps": "19.99",
+        "st": null
+    },
+    "yakuza-remastered-collection": {
+        "ps": [
+            "59.99",
+            "29.99",
+            "19-January"
+        ],
+        "st": null
+    },
+    "yakuza:-like-a_dragon": {
+        "ps": [
+            "59.99",
+            "44.99",
+            "8-January"
+        ],
+        "st": [
+            "59.99",
+            "44.99",
+            "ends-in"
+        ]
+    }
 }
