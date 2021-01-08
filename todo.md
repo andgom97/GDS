@@ -14,3 +14,4 @@ GDS 1.0
 Features
 --------
 - [X] Save and display the discount countdown.
+- [ ] Get videogame name from web and display it (instead of making the user type it) 
