@@ -1,10 +1,18 @@
 import requests
+
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager
+
 from bs4 import BeautifulSoup
+
 from URLs import PSSTR_SEARCH
 from prcolors import prLightOrange, prRed
-from shutil import copy2
-import json
 from const import MONTHS
+
 
 
 # Function that returns the object from the http request
@@ -46,8 +54,8 @@ def search_game(game):
     finally:
         return game_url
 
-# Function to get game price from the Playstation store (if discounted the function returns a dictionary with the following strucure:
-# {'original':og_price_value,'final':fn_price_value,'countdown':countdown_value})
+# Function to get game price from the Playstation store (if discounted the function returns a tuple with the following strucure:
+# ('original price value','final price value,'countdown_value'))
 def get_game_price_ps(url):
     if not url:
         return None
@@ -70,8 +78,8 @@ def get_game_price_ps(url):
     except AttributeError:
         return None
 
-# Function to get game price from Steam (if discounted the function returns a dictionary with the following strucure:
-# {'original':og_price_value,'final':fn_price_value,'countdown':countdown_value})
+# Function to get game price from Steam (if discounted the function returns a tuple with the following strucure:
+# ('original price value','final price value,'countdown_value'))
 def get_game_price_st(url):
     if not url:
         return None
@@ -92,3 +100,73 @@ def get_game_price_st(url):
         return price.text[9:14].replace(',','.')
     except AttributeError:
         return None
+
+# Function to get game price from the Epic Games store (if discounted the function returns a tuple with the following strucure:
+# ('original price value','final price value,'countdown_value'))
+def get_game_price_ep(url):
+    if not url:
+        return None
+    try:
+        # Chrome options
+        chrome_options = webdriver.ChromeOptions()
+        user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+        chrome_options.add_argument(f'user-agent={user_agent}') # user_agent
+        chrome_options.add_argument('--headless') # headless mode
+        chrome_options.add_argument('--incognito') # incognito mode
+        # Webdriver
+        driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
+        driver.get(url)
+        # WebDriverWait() until price data is loaded
+        timeout = 5
+        try:
+            price_section = EC.presence_of_element_located((By.CLASS_NAME,'css-r6gfjb-PurchasePrice__priceContainer'))
+            WebDriverWait(driver, timeout).until(price_section)
+        except TimeoutException:
+            print("Timed out waiting for prices to load")
+
+        
+        # BeautifulSoup
+        soup = BeautifulSoup(driver.page_source.encode('utf-8').strip(),'html.parser')
+
+        # Check if price appears on the top section
+        price_top_section = soup.find('div',class_='css-4tpn3e')
+        if price_top_section:
+            prices = price_top_section.findAll(attrs={'data-component':'Price'})
+            if len(prices)<2: # If not discounted
+                return prices[0].text[:-2].replace(',','.')
+            else: # If discounted
+                countdown_section = soup.find('div',attrs={'data-component':'PurchaseCaption'}).find('span',attrs={'data-component':'Message'})
+                countdown_value = countdown_section.text.split()[4].split('/')
+                countdown_month = MONTHS.get(int(countdown_value[1]), None)
+                return (prices[0].text[:-2].replace(',','.'),prices[1].text[:-2].replace(',','.'),countdown_value[0]+'-'+countdown_month)
+        # Check if price appears on the bot section
+        else:
+            products = soup.findAll('div',attrs={'data-component':'ProductCard'})
+            price_section = products[0].find('div',attrs={'data-component':'PriceLayout'})
+            prices = price_section.findAll(attrs={'data-component':'Price'})
+            if len(prices)<2: # If not discounted
+                return prices[0].text[:-2].replace(',','.')
+            else: # If discounted
+                countdown_section = price_section.find('div',attrs={'data-component':'PurchaseCaption'}).find('span',attrs={'data-component':'Message'})
+                countdown_value = countdown_section.text.split()[4].split('/')
+                countdown_month = MONTHS.get(int(countdown_value[1]), None)
+                return (prices[0].text[:-2].replace(',','.'),prices[1].text[:-2].replace(',','.'),countdown_value[0]+'-'+countdown_month)
+    except AttributeError:
+        print('-> AttributeError')
+        return None
+
+        
+# ------------- Price in top section ---------------
+# Discounted
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/monkey-barrels/home'))
+# Not discounted
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/super-meat-boy-forever/home'))
+
+# ------------- Price in bot section ---------------
+# TODO FAILS SOMETIMES when the price is in the bot section
+# Discounted
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/werewolf-the-apocalypse-earthblood/home'))
+# Not discounted
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/assassins-creed-origins/home'))
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/star-wars-jedi-fallen-order/home'))
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
