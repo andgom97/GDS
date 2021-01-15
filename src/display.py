@@ -41,7 +41,7 @@ def display_prices():
                 original_st = prices[game]['st'][0]
                 final_st = prices[game]['st'][1]
                 countdown_st = prices[game]['st'][2]
-                st_str = f"\033[91m{original_st}\033[00m \033[97m->\033[00m \033[92m{final_st}\033[00m (Until: {countdown_st})"
+                st_str = f"\033[97m|\033[91m   {original_st}\033[00m \033[97m->\033[00m \033[92m{final_st}\033[00m (Until: {countdown_st})"
                 while len(st_str)<65:
                     st_str += ' '
             # If not
@@ -58,7 +58,7 @@ def display_prices():
                 original_ep = prices[game]['ep'][0]
                 final_ep = prices[game]['ep'][1]
                 countdown_ep = prices[game]['ep'][2]
-                ep_str = f"\033[91m{original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})"
+                ep_str = f"\033[97m|\033[91m  {original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})"
                 while len(ep_str)<65:
                     ep_str += ' '
             # If not

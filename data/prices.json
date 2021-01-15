@@ -65,6 +65,11 @@
         "st": null,
         "ep": null
     },
+    "ghost-of-tsushima": {
+        "ps": "69.99",
+        "st": null,
+        "ep": null
+    },
     "god-of-war": {
         "ps": "19.99",
         "st": null,
@@ -101,7 +106,11 @@
     },
     "mafia-1": {
         "ps": "39.99",
-        "st": "39.99",
+        "st": [
+            "39.99",
+            "29.99",
+            "18-January"
+        ],
         "ep": "39.99"
     },
     "mafia-2": {
@@ -110,7 +119,11 @@
             "14.99",
             "19-January"
         ],
-        "st": "29.99",
+        "st": [
+            "29.99",
+            "14.99",
+            "18-January"
+        ],
         "ep": null
     },
     "middle-earth-2": {
@@ -152,7 +165,11 @@
     },
     "read-dead-redemption-2": {
         "ps": "19.99",
-        "st": "59.99",
+        "st": [
+            "59.99",
+            "40.19",
+            "29-January"
+        ],
         "ep": "59.99"
     },
     "sekiro": {

@@ -42,5 +42,6 @@ GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTION000002','
          'star-wars-jedi:-fallen-order':{'ps':'EP0006-CUSA12529_00-RESPAWNSWBIRDDOG','st':'1172380/STAR_WARS_Jedi_La_Orden_cada/','ep':'star-wars-jedi-fallen-order/home'},
          'final-fantasy-7-remake':{'ps':'EP0082-CUSA07187_00-FFVIIREMAKE00000','st':None,'ep':None},
          'kentucky-route-zero':{'ps':'EP2333-CUSA10030_00-KRZTVSIEE0000000','st':'231200/Kentucky_Route_Zero_PC_Edition/','ep':None},
-         'hades':{'ps':None,'st':'1145360/Hades/','ep':'hades/home'}
+         'hades':{'ps':None,'st':'1145360/Hades/','ep':'hades/home'},
+         'ghost-of-tsushima':{'ps':'EP9000-CUSA13323_00-GHOSTSHIP0000000','st':None,'ep':None}
         }
