@@ -1,7 +1,7 @@
 Games Discount Scraper (GDS)
 ============================
 
-Python web scraper to get the desired game prices from the **Playstation**, **Steam** and **Epic Games** stores, while highlighting the discounted ones.
+A Python web scraper to get the desired game prices from the **Playstation**, **Steam** and **Epic Games** stores, while highlighting the discounted ones.
 
 Place the desired games URLs you want to track at the ``GDS/src/URL.py`` file, and the scraper will save them with a **cron process**, which must be configured in first place. 
 
