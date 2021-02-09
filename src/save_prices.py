@@ -3,7 +3,7 @@ from URLs import GAMES, PS_PRODUCT, STM_PRODUCT, EP_PRODUCT
 import json
 from shutil import copy2
 import os
-from scrapper import get_game_price_ps, get_game_price_st, get_game_price_ep
+from scraper import get_game_price_ps, get_game_price_st, get_game_price_ep
 import random
 from multiprocessing.dummy import Pool as ThreadPool
 
