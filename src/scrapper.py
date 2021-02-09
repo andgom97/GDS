@@ -1,4 +1,5 @@
 import requests
+import datetime
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -11,8 +12,7 @@ from bs4 import BeautifulSoup
 
 from URLs import PSSTR_SEARCH
 from prcolors import prLightOrange, prRed
-from const import MONTHS
-
+from const import MONTHS, CHROMEDRIVER_PATH
 
 
 # Function that returns the object from the http request
@@ -95,39 +95,65 @@ def get_game_price_st(url):
             fn_price_value = price_area.find('div',class_='discount_final_price')
             # Extract countdown
             countdown_str = price_area.find('p',class_='game_purchase_discount_countdown').text
+            dt = datetime.datetime.today()
             countdown_value = countdown_str.split()[-2:]
-            return (og_price_value.text[:-1].replace(',','.'),fn_price_value.text[:-1].replace(',','.'),countdown_value[0]+'-'+countdown_value[1])
+            if countdown_value==['ends','in']:
+                countdown_value = [str(dt.day),dt.month]
+                countdown_month = MONTHS.get(int(countdown_value[1]), None)
+            else:
+                countdown_month = countdown_value[1]
+            return (og_price_value.text[:-1].replace(',','.'),fn_price_value.text[:-1].replace(',','.'),countdown_value[0]+'-'+countdown_month)
         return price.text[9:14].replace(',','.')
     except AttributeError:
         return None
 
+# TODO Custom WebDriverWait conditions 
+class element_has_class(object):
+
+    def __init__(self,locator_1):
+        self.price_locator = locator_1
+
+    def __call__(self,driver):
+        price_section = driver.find_element(*self.price_locator)
+        print('try')
+        if price_section.get_attribute('innerHTML'):
+            return price_section
+        else:
+            return False
+        
 # Function to get game price from the Epic Games store (if discounted the function returns a tuple with the following strucure:
 # ('original price value','final price value,'countdown_value'))
+# TODO fix weird interaction between BeautifulSoup and Selenium (race condition) 
 def get_game_price_ep(url):
     if not url:
         return None
+    
+    # Chrome options
+    chrome_options = webdriver.ChromeOptions()
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    chrome_options.add_argument(f'user-agent={user_agent}') # user_agent
+    chrome_options.add_argument('--headless') # headless mode
+    chrome_options.add_argument('--incognito') # incognito mode
+    # Webdriver
+    driver = webdriver.Chrome(CHROMEDRIVER_PATH,options=chrome_options)
+    driver.get(url)
     try:
-        # Chrome options
-        chrome_options = webdriver.ChromeOptions()
-        user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
-        chrome_options.add_argument(f'user-agent={user_agent}') # user_agent
-        chrome_options.add_argument('--headless') # headless mode
-        chrome_options.add_argument('--incognito') # incognito mode
-        # Webdriver
-        driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
-        driver.get(url)
-        # WebDriverWait() until price data is loaded
-        timeout = 5
-        try:
-            price_section = EC.presence_of_element_located((By.CLASS_NAME,'css-r6gfjb-PurchasePrice__priceContainer'))
-            WebDriverWait(driver, timeout).until(price_section)
-        except TimeoutException:
-            print("Timed out waiting for prices to load")
+        # Classes values
+        top_price_class = 'css-8v8on4'
+        disc_top_price_class = 'css-1blw3mq-Price__discount'
+        bot_price_class = 'css-ovezyj'
+        disc_bot_price_class = 'css-1kf4kf9-Price__discount'
 
-        
-        # BeautifulSoup
+        # WebDriverWait() until price data gets loaded
+        price_section = EC.presence_of_element_located((By.CLASS_NAME,'css-r6gfjb-PurchasePrice__priceContainer'))
+        WebDriverWait(driver, 10).until(price_section)
+
+        # BeautifulSoup gets HTML
         soup = BeautifulSoup(driver.page_source.encode('utf-8').strip(),'html.parser')
-
+        
+        # Close driver
+        driver.quit()
+        
         # Check if price appears on the top section
         price_top_section = soup.find('div',class_='css-4tpn3e')
         if price_top_section:
@@ -152,7 +178,13 @@ def get_game_price_ep(url):
                 countdown_month = MONTHS.get(int(countdown_value[1]), None)
                 return (prices[0].text[:-2].replace(',','.'),prices[1].text[:-2].replace(',','.'),countdown_value[0]+'-'+countdown_month)
     except AttributeError:
-        print('-> AttributeError')
+        prLightOrange('ERROR: AttributeError')
+        return None
+    except TimeoutException:
+        prLightOrange("WARNING: Timed out waiting for prices to load")
+        return None
+    except IndexError:
+        prLightOrange(f'WARNING: Race condition occurred while getting price from {url}')
         return None
 
         
@@ -163,10 +195,11 @@ def get_game_price_ep(url):
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/super-meat-boy-forever/home'))
 
 # ------------- Price in bot section ---------------
-# TODO FAILS SOMETIMES when the price is in the bot section
 # Discounted
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/werewolf-the-apocalypse-earthblood/home'))
 # Not discounted
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/assassins-creed-origins/home'))
-#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/star-wars-jedi-fallen-order/home'))
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/star-wars-jedi-fallen-order/home'))
+#∫print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
+#print(get_game_price_ps(''))

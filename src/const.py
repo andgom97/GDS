@@ -1,3 +1,5 @@
+import os
+
 # Months switcher
 MONTHS = {
             1: "January",
@@ -13,3 +15,9 @@ MONTHS = {
             11: "November",
             12: "December"
         }
+
+# Chromedriver path
+CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER')
+
+# GDS data dir path
+DATA_PATH = os.getenv('GDS')+'/data/'

@@ -11,7 +11,7 @@ EPSTR = 'https://www.epicgames.com/store'
 EP_PRODUCT = EPSTR + '/es-ES/product/'
 
 # Games URLs
-GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTION000002','st':'1174180/Red_Dead_Redemption_2/','ep':'red-dead-redemption-2/home'},
+GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTIONFULL02','st':'1174180/Red_Dead_Redemption_2/','ep':'red-dead-redemption-2/home'},
          'spyro':{'ps':'EP0002-CUSA12085_00-SPYROTRILOGY0001','st':None,'ep':None},
          'sekiro':{'ps':'EP0002-CUSA13801_00-SEKIROGAME000001','st':'814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/','ep':None},
          'god-of-war':{'ps':'EP9000-CUSA07411_00-0000000GODOFWARN','st':None,'ep':None},
@@ -28,7 +28,7 @@ GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTION000002','
          'death-stranding':{'ps':'EP9000-CUSA12606_00-DEATHSTRAND00001','st':None,'ep':None},
          'devil-may-cry-5':{'ps':'EP0102-CUSA08161_00-DMC5000000000001','st':'601150/Devil_May_Cry_5/','ep':None},
          'mafia-1':{'ps':'EP1001-CUSA18100_00-MAFIAONEREMASTER','st':'1030840/Mafia_Edicin_Definitiva/','ep':'mafia-definitive-edition/home'},
-         'mafia-2':{'ps':'EP1001-CUSA17761_00-MAFIATWOREMASTER','st':'1030830/Mafia_II_Edicin_Definitiva/','ep':None},
+         'mafia-2':{'ps':'EP1001-CUSA17761_00-MAFIATWOREMASTER','st':'1030830/Mafia_II_Edicin_Definitiva/','ep':'mafia-ii-definitive-edition/home'},
          'days-gone':{'ps':'EP9000-CUSA09175_00-DAYSGONECOMPLETE','st':None,'ep':None},
          'middle-earth-2':{'ps':'EP1018-CUSA04402_00-KRAKENEDIT0STAND','st':'356190/Middleearth_Shadow_of_War/','ep':None},
          'kingdom-hearts-3-re-mind':{'ps':'EP0082-CUSA12025_00-KHX30DLC00000003','st':None,'ep':None},
@@ -43,5 +43,12 @@ GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTION000002','
          'final-fantasy-7-remake':{'ps':'EP0082-CUSA07187_00-FFVIIREMAKE00000','st':None,'ep':None},
          'kentucky-route-zero':{'ps':'EP2333-CUSA10030_00-KRZTVSIEE0000000','st':'231200/Kentucky_Route_Zero_PC_Edition/','ep':None},
          'hades':{'ps':None,'st':'1145360/Hades/','ep':'hades/home'},
-         'ghost-of-tsushima':{'ps':'EP9000-CUSA13323_00-GHOSTSHIP0000000','st':None,'ep':None}
+         'ghost-of-tsushima':{'ps':'EP9000-CUSA13323_00-GHOSTSHIP0000000','st':None,'ep':None},
+         'resident-evil-2':{'ps':'EP0102-CUSA09171_00-BH2R000000000001','st':'883710/Resident_Evil_2/','ep':None},
+         'metal-gear-solid-5':{'ps':'EP0101-CUSA05597_00-MAINGAME00000000','st':None,'ep':None},
+         'desperados-3':{'ps':'EP4389-CUSA11112_00-THQNORDEUDESP000','st':'610370/Desperados_III/','ep':'desperados-3/home'},
+         'shadow-tactics':{'ps':'EP8923-CUSA07792_00-DEAST00000000001','st':'418240/Shadow_Tactics_Blades_of_the_Shogun/','ep':'shadow-tactics/home'},
+         'scott-pilgrim-vs.-the-world':{'ps':'EP0001-CUSA20078_00-SCOTTPILGRIM0001','st':None,'ep':'scott-pilgrim-vs-the-world-the-game/home'},
+         'resident-evil-3':{'ps':'EP0102-CUSA14123_00-BH3B000000000001','st':'952060/Resident_Evil_3/','ep':None},
+         'resident-evil-2':{'ps':'EP0102-CUSA09171_00-BH2R000000000001','st':'883710/Resident_Evil_2/','ep':None}
         }

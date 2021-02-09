@@ -1,8 +1,6 @@
 import json
-import os
 from prcolors import prLightGray, prLightOrange
-
-DATA_PATH = os.getenv('GDS')+'/data/'
+from const import DATA_PATH
 
 # Main function to display info in the terminal
 def display_prices():
@@ -41,8 +39,8 @@ def display_prices():
                 original_st = prices[game]['st'][0]
                 final_st = prices[game]['st'][1]
                 countdown_st = prices[game]['st'][2]
-                st_str = f"\033[97m|\033[91m   {original_st}\033[00m \033[97m->\033[00m \033[92m{final_st}\033[00m (Until: {countdown_st})"
-                while len(st_str)<65:
+                st_str = f"\033[97m|\033[91m  {original_st}\033[00m \033[97m->\033[00m \033[92m{final_st}\033[00m (Until: {countdown_st})"
+                while len(st_str)<73:
                     st_str += ' '
             # If not
             else:
@@ -58,18 +56,18 @@ def display_prices():
                 original_ep = prices[game]['ep'][0]
                 final_ep = prices[game]['ep'][1]
                 countdown_ep = prices[game]['ep'][2]
-                ep_str = f"\033[97m|\033[91m  {original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})"
-                while len(ep_str)<65:
+                ep_str = f"\033[97m|\033[91m  {original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})  \033[97m|\033[00m"
+                while len(ep_str)<73:
                     ep_str += ' '
             # If not
             else:
                 price = prices[game]['ep']
                 if not price:
                     price = '-----'
-                ep_str = f"\033[97m|                 {price}\033[00m"
+                ep_str = f"\033[97m|                 {price}                 |\033[00m"
                 while len(ep_str)<47:
                     ep_str += ' '
-            print(f"\033[97m -> {name} | \033[00m {ps_str}  {st_str}  {ep_str}   |")
+            print(f"\033[97m -> {name} | \033[00m {ps_str}  {st_str}  {ep_str}")
     except FileNotFoundError:
         prLightOrange(f"Data needs to be downloaded first")
     except Exception as e:

@@ -3,3 +3,6 @@ export GDS="$HOME/path/to/GDS"
 
 # Display game prices on your terminal
 alias gds='$GDS/sh/display.sh'
+
+# Chromedriver path
+export CHROMEDRIVER="$HOME/path/to/{chromedriver_version}/chromedriver"

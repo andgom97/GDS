@@ -2,32 +2,24 @@
     "assassins-creed-origins": {
         "ps": "69.99",
         "st": "59.99",
-        "ep": "59.99"
+        "ep": [
+            "59.99",
+            "11.99",
+            "11-February"
+        ]
     },
     "cuphead": {
-        "ps": [
-            "19.99",
-            "13.99",
-            "19-January"
-        ],
+        "ps": "19.99",
         "st": "19.99",
         "ep": null
     },
     "dark-souls-1": {
-        "ps": [
-            "39.99",
-            "11.99",
-            "19-January"
-        ],
+        "ps": "39.99",
         "st": "39.99",
         "ep": null
     },
     "dark-souls-3": {
-        "ps": [
-            "49.99",
-            "12.49",
-            "19-January"
-        ],
+        "ps": "49.99",
         "st": "59.99",
         "ep": null
     },
@@ -41,23 +33,28 @@
         "st": null,
         "ep": null
     },
+    "desperados-3": {
+        "ps": "59.99",
+        "st": "49.99",
+        "ep": "49.99"
+    },
     "devil-may-cry-5": {
         "ps": "24.99",
         "st": "24.99",
         "ep": null
     },
     "doom": {
-        "ps": [
-            "19.99",
-            "5.99",
-            "19-January"
-        ],
+        "ps": "19.99",
         "st": "19.99",
         "ep": null
     },
     "doom-eternal": {
-        "ps": "69.99",
-        "st": "59.99",
+        "ps": [
+            "69.99",
+            "23.09",
+            "17-February"
+        ],
+        "st": "19.99",
         "ep": null
     },
     "final-fantasy-7-remake": {
@@ -66,7 +63,11 @@
         "ep": null
     },
     "ghost-of-tsushima": {
-        "ps": "69.99",
+        "ps": [
+            "69.99",
+            "49.69",
+            "10-February"
+        ],
         "st": null,
         "ep": null
     },
@@ -78,14 +79,10 @@
     "hades": {
         "ps": null,
         "st": "20.99",
-        "ep": "20.99"
+        "ep": null
     },
     "kentucky-route-zero": {
-        "ps": [
-            "21.99",
-            "14.29",
-            "19-January"
-        ],
+        "ps": "21.99",
         "st": "22.99",
         "ep": null
     },
@@ -105,51 +102,52 @@
         "ep": null
     },
     "mafia-1": {
-        "ps": "39.99",
+        "ps": [
+            "39.99",
+            "29.99",
+            "17-February"
+        ],
         "st": [
             "39.99",
             "29.99",
-            "18-January"
+            "18-February"
         ],
-        "ep": "39.99"
+        "ep": [
+            "39.99",
+            "29.99",
+            "11-February"
+        ]
     },
     "mafia-2": {
-        "ps": [
-            "29.99",
-            "14.99",
-            "19-January"
-        ],
+        "ps": "29.99",
         "st": [
             "29.99",
             "14.99",
-            "18-January"
+            "18-February"
         ],
+        "ep": [
+            "29.99",
+            "14.99",
+            "11-February"
+        ]
+    },
+    "metal-gear-solid-5": {
+        "ps": "19.99",
+        "st": null,
         "ep": null
     },
     "middle-earth-2": {
-        "ps": [
-            "39.99",
-            "15.99",
-            "19-January"
-        ],
+        "ps": "39.99",
         "st": "39.99",
         "ep": null
     },
     "nier-automata": {
-        "ps": [
-            "39.99",
-            "19.99",
-            "19-January"
-        ],
+        "ps": "39.99",
         "st": null,
         "ep": null
     },
     "no-mans-sky": {
-        "ps": [
-            "49.99",
-            "24.99",
-            "19-January"
-        ],
+        "ps": "49.99",
         "st": "54.99",
         "ep": null
     },
@@ -164,26 +162,70 @@
         "ep": null
     },
     "read-dead-redemption-2": {
-        "ps": "19.99",
-        "st": [
+        "ps": [
             "59.99",
-            "40.19",
-            "29-January"
+            "29.99",
+            "17-February"
         ],
+        "st": "59.99",
         "ep": "59.99"
     },
-    "sekiro": {
-        "ps": "69.99",
+    "resident-evil-2": {
+        "ps": [
+            "39.99",
+            "15.99",
+            "17-February"
+        ],
+        "st": "39.99",
+        "ep": null
+    },
+    "resident-evil-3": {
+        "ps": [
+            "59.99",
+            "19.79",
+            "17-February"
+        ],
         "st": "59.99",
         "ep": null
     },
+    "scott-pilgrim-vs.-the-world": {
+        "ps": "14.99",
+        "st": null,
+        "ep": "14.99"
+    },
+    "sekiro": {
+        "ps": [
+            "69.99",
+            "45.49",
+            "17-February"
+        ],
+        "st": [
+            "59.99",
+            "38.99",
+            "17-February"
+        ],
+        "ep": null
+    },
     "shadow-of-the-colossus": {
-        "ps": "39.99",
+        "ps": [
+            "39.99",
+            "12.79",
+            "10-February"
+        ],
         "st": null,
         "ep": null
     },
+    "shadow-tactics": {
+        "ps": "49.99",
+        "st": "39.99",
+        "ep": null
+    },
     "spyro": {
-        "ps": "39.99",
+        "ps": [
+            "39.99",
+            "15.99",
+            "10-February"
+        ],
         "st": null,
         "ep": null
     },
@@ -191,10 +233,10 @@
         "ps": [
             "69.99",
             "25.19",
-            "19-January"
+            "17-February"
         ],
         "st": null,
-        "ep": "59.99"
+        "ep": "39.99"
     },
     "the-last-of-us-parte-2": {
         "ps": "69.99",
@@ -202,20 +244,12 @@
         "ep": null
     },
     "yakuza-6": {
-        "ps": [
-            "19.99",
-            "11.99",
-            "19-January"
-        ],
+        "ps": "19.99",
         "st": null,
         "ep": null
     },
     "yakuza-remastered-collection": {
-        "ps": [
-            "59.99",
-            "29.99",
-            "19-January"
-        ],
+        "ps": "39.99",
         "st": null,
         "ep": null
     },

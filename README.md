@@ -11,6 +11,8 @@ Configuration
 ----------------
 To configure the environment properly, set the ``$GDS`` variable as described in the ``GDS/config/bash_profile_config.txt`` file, along with the alias to display the prices on the terminal. After that set a **cron process** as described in the ``GDS/config/cron.txt`` file. Feel free to tune the cron frequency and the alias to display the prices as you wish.
 
+Before you start, you will also need to set the ``$CHROMEDRIVER`` varibale equals to the path where the chromedriver file is allocated in your system, e.g. in OSX systems you will be able to find it at ``$HOME/.wdm/drivers/chromedriver/mac64/{version}/chromedriver``. If you don't have the chromedriver installed you can always download the latest version [here](https://chromedriver.chromium.org/downloads).
+
 HTTP API 
 -----------
 The ``GDS/src/api/`` directory contains the source code to make http requests and get the game prices you want to track remotely.
