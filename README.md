@@ -7,6 +7,11 @@ Place the desired games URLs you want to track at the ``GDS/src/URL.py`` file, a
 
 *Note: You can always force the saving prices process by running the ``GDS/sh/save_prices.sh`` script.*
 
+The following image shows what the ``gds``should display on your terminal:
+
+![alt text](https://github.com/andgom97/GDS/tree/master/res/gds_example.png "GDS command result example")
+
+
 Configuration
 ----------------
 To configure the environment properly, set the ``$GDS`` variable as described in the ``GDS/config/bash_profile_config.txt`` file, along with the alias to display the prices on the terminal. After that set a **cron process** as described in the ``GDS/config/cron.txt`` file. Feel free to tune the cron frequency and the alias to display the prices as you wish.
