@@ -70,12 +70,13 @@ def get_game_price_ps(url):
         if not og_game_price: # If not discounted
             return fn_game_price.text[:-2].replace(',','.')
         # Extract discount countdown
-        countdown_str = price_section.find('span',class_='psw-p-l-xs psw-body-2 psw-text-medium psw-c-secondary psw-m-x-3xs psw-m-y-4xs')
+        countdown_str = price_section.find('span',attrs={'data-qa':'mfeCtaMain#offer0#discountDescriptor'})
         countdown_value = countdown_str.text.split()[-1:][0].split('/')
         # Translate number to name of the month
         countdown_month = MONTHS.get(int(countdown_value[1]), None)
         return (og_game_price.text[:-2].replace(',','.'),fn_game_price.text[:-2].replace(',','.'),countdown_value[0]+'-'+countdown_month) 
     except AttributeError:
+        prRed(f"ERROR: AttributeError while scraping {url}")
         return None
 
 # Function to get game price from Steam (if discounted the function returns a tuple with the following strucure:
@@ -89,6 +90,7 @@ def get_game_price_st(url):
         price_area = soup.find('div',class_='game_area_purchase_game_wrapper')
         # Extract standard price
         price = price_area.find('div',class_='game_purchase_price price')
+        print(price)
         if not price: # If discounted
             # Extract original and final prices
             og_price_value = price_area.find('div',class_='discount_original_price')
@@ -105,21 +107,9 @@ def get_game_price_st(url):
             return (og_price_value.text[:-1].replace(',','.'),fn_price_value.text[:-1].replace(',','.'),countdown_value[0]+'-'+countdown_month)
         return price.text[9:14].replace(',','.')
     except AttributeError:
+        prRed(f"ERROR: AttributeError while scraping {url}")
         return None
 
-# TODO Custom WebDriverWait conditions 
-class element_has_class(object):
-
-    def __init__(self,locator_1):
-        self.price_locator = locator_1
-
-    def __call__(self,driver):
-        price_section = driver.find_element(*self.price_locator)
-        print('try')
-        if price_section.get_attribute('innerHTML'):
-            return price_section
-        else:
-            return False
         
 # Function to get game price from the Epic Games store (if discounted the function returns a tuple with the following strucure:
 # ('original price value','final price value,'countdown_value'))
@@ -178,7 +168,7 @@ def get_game_price_ep(url):
                 countdown_month = MONTHS.get(int(countdown_value[1]), None)
                 return (prices[0].text[:-2].replace(',','.'),prices[1].text[:-2].replace(',','.'),countdown_value[0]+'-'+countdown_month)
     except AttributeError:
-        prLightOrange('ERROR: AttributeError')
+        prRed(f"ERROR: AttributeError while scraping {url}")
         return None
     except TimeoutException:
         prLightOrange("WARNING: Timed out waiting for prices to load")
@@ -201,5 +191,5 @@ def get_game_price_ep(url):
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/assassins-creed-origins/home'))
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
 #print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/star-wars-jedi-fallen-order/home'))
-#∫print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
-#print(get_game_price_ps(''))
+#print(get_game_price_ep('https://www.epicgames.com/store/es-ES/product/mafia-ii-definitive-edition/home'))
+print(get_game_price_st('https://store.steampowered.com/app/1172380/STAR_WARS_Jedi_La_Orden_cada/'))

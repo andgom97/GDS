@@ -35,7 +35,7 @@ GAMES = {'read-dead-redemption-2':{'ps':'EP1004-CUSA08519_00-REDEMPTIONFULL02','
          'kingdom-hearts-1.5+2.5 remix':{'ps':'EP0082-CUSA05786_00-KINGDOMHEART1525','st':None,'ep':None},
          'kingdom-hearts-2.8':{'ps':'EP0082-CUSA05787_00-KINGDOMHEARTSX28','st':None,'ep':None},
          'assassins-creed-origins':{'ps':'EP0001-CUSA05625_00-GAMEACEMPIRE0000','st':'582160/Assassins_Creed_Origins/','ep':'assassins-creed-origins/home'},
-         'yakuza:-like-a_dragon':{'ps':'EP0177-CUSA16745_00-SHINRYUGAGOTOKEN','st':'1235140/Yakuza_Like_a_Dragon/','ep':None},
+         'yakuza:-like-a_dragon':{'ps':None,'st':'1235140/Yakuza_Like_a_Dragon/','ep':None},
          'yakuza-remastered-collection':{'ps':'EP0177-CUSA15360_00-YAKUZAREMASTERED','st':None,'ep':None},
          'dark-souls-1':{'ps':'EP0700-CUSA08495_00-DARKSOULSHD00000','st':'570940/DARK_SOULS_REMASTERED/','ep':None},
          'dark-souls-3':{'ps':'EP0700-CUSA03365_00-DARKSOULS3000000','st':'374320/DARK_SOULS_III/','ep':None},
