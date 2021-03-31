@@ -11,7 +11,7 @@ def display_prices():
         print(f"\033[97m |           Videogame             |           Playstation Store           |                 Steam                 |            Epic Games Store           |\033[00m")
         print('------------------------------------------------------------------------------------------------------------------------------------------------------------')
         for game in prices:  
-            name = game.replace('-',' ').capitalize()
+            name = ' '.join([n.capitalize() for n in game.split('-')])
             ps_str = ''
             st_str = ''
             while len(name)<30:
@@ -56,7 +56,7 @@ def display_prices():
                 original_ep = prices[game]['ep'][0]
                 final_ep = prices[game]['ep'][1]
                 countdown_ep = prices[game]['ep'][2]
-                ep_str = f"\033[97m|\033[91m  {original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})  \033[97m|\033[00m"
+                ep_str = f"\033[97m|\033[91m  {original_ep}\033[00m \033[97m->\033[00m \033[92m{final_ep}\033[00m (Until: {countdown_ep})  \033[97m    |\033[00m"
                 while len(ep_str)<73:
                     ep_str += ' '
             # If not

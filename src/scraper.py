@@ -90,7 +90,6 @@ def get_game_price_st(url):
         price_area = soup.find('div',class_='game_area_purchase_game_wrapper')
         # Extract standard price
         price = price_area.find('div',class_='game_purchase_price price')
-        print(price)
         if not price: # If discounted
             # Extract original and final prices
             og_price_value = price_area.find('div',class_='discount_original_price')
